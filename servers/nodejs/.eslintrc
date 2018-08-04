@@ -1,0 +1,61 @@
+{
+	"env": {
+		"browser": true
+	},
+	"rules": {
+		"strict": [
+			2,
+			"global"
+		],
+		"quotes": [
+			2,
+			"single"
+		],
+		"eqeqeq": [
+			2,
+			"smart"
+		],
+		"indent": [
+			2,
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"semi": [
+			2,
+			"always"
+		],
+		"max-params": [
+			2,
+			4
+		],
+		"max-depth": [
+			2,
+			2
+		],
+		"max-statements": [
+			1,
+			15
+		],
+		"complexity": [
+			1,
+			5
+		],
+		"no-unused-vars": [
+			2,
+			{
+				"vars": "all",
+				"args": "after-used",
+				"ignoreRestSiblings": false
+			}
+		],
+		"no-undef": [
+			2
+		]
+	},
+	"globals": {
+		"require": false,
+		"module": false
+	}
+}

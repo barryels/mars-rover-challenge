@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+# Added at 2018-07-13 13:01:45 +0200 by barryels:
+gem "minitest", "~> 5.10"
+
+# Added at 2018-07-14 11:25:48 +0200 by barryels:
+gem "guard", "~> 2.14", :groups => [:development, :test]
+
+# Added at 2018-07-14 11:26:22 +0200 by barryels:
+gem "guard-minitest", "~> 2.4", :groups => [:development, :test]
