@@ -1,0 +1,22 @@
+{
+  "name": "node-api",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test:watch": "jest --watch",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.4.1",
+    "nodemon": "^1.18.3",
+    "request": "^2.87.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
