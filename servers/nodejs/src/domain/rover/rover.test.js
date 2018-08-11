@@ -2,14 +2,9 @@
 
 const rover = require('./rover');
 
+it('should return its initial position of: bottom left origin facing North', () => {
+  const actual = rover.getPosition();
+  const expected = [0, 0, 'N'];
 
-describe('', () => {
-
-  test('initial position should be bottom left origin facing North', function () {
-    const actual = rover.getPosition();
-    const expected = [0, 0, 'N'];
-
-    expect(expected).toEqual(actual);
-  });
-
+  expect(expected).toEqual(actual);
 });
