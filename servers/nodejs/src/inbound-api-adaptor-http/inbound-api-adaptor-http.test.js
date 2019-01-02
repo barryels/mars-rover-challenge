@@ -14,6 +14,12 @@ function getFullyQualifiedRequestPath(partialPath) {
   return 'http://lvh.me:' + CONFIG.port + CONFIG.basePath + partialPath;
 }
 
+function _test() {
+  return new Promise((resolve, reject) => {
+    resolve(true);
+  });
+}
+
 
 describe('inboundApiAdaptorHttp', () => {
   let inboundApiAdaptorHttp;
@@ -40,13 +46,28 @@ describe('inboundApiAdaptorHttp', () => {
   });
 
 
-  test('it should return the rover data', (done) => {
-    request(getFullyQualifiedRequestPath('/rover'), (error, response, body) => {
-      expect(body).toBe(JSON.stringify({
+  test('it should return a list of active rovers', (done) => {
+    request(getFullyQualifiedRequestPath('/get-rover-list'), (error, response, body) => {
+      expect(body).toBe(JSON.stringify([]));
+      done();
+    });
+  });
+
+
+  test('it should return the rover\'s current state', (done) => {
+    request({
+      uri: getFullyQualifiedRequestPath('/get-rover-state'),
+      method: 'POST',
+      json: {
+        id: 'asdf-1234',
+      },
+    }, (error, response, body) => {
+      expect(JSON.stringify(body)).toBe(JSON.stringify({
+        id: 'asdf-1234',
         position: [1, 1, 'S'],
       }));
       done();
-    })
+    });
   });
 
 
