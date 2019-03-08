@@ -1,0 +1,17 @@
+{
+  "name": "rover-controller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:watch": "nodemon --exec 'npm test'",
+    "test": "tape ./**/*.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.10",
+    "tape": "^4.10.1"
+  }
+}
