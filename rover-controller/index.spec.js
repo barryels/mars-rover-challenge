@@ -1,5 +1,5 @@
 const test = require('tape');
-const domain = require('./index');
+const domain = require('./index2');
 
 
 function makeGrid(width = 10, height = 10) {
@@ -217,7 +217,7 @@ test('it should be able to handle movement and rotation commands in one instruct
 });
 
 
-test('it should handle instructions that are not recognised', function (t) {
+test('it should ignore instructions that are not recognised', function (t) {
   domain.instructRover({
       grid: makeGrid(),
       rover: makeRover({
@@ -241,8 +241,8 @@ test('it should handle instructions that are not recognised', function (t) {
       }),
     }, 'mmrmmrmmlmm')
     .then((result) => {
-      t.equal(result.rover.orientation, 'E');
-      t.equal(result.rover.x, 9);
+      t.equal(result.rover.orientation, 'N');
+      t.equal(result.rover.x, 5);
       t.equal(result.rover.y, 5);
     });
 
